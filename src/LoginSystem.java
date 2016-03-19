@@ -49,7 +49,17 @@ public class LoginSystem {
                                     switch (key)
                                     {
                                         case 1:
-                                            stu.getinfo();
+                                            System.out.println("您的学生信息如下：");
+                                            System.out.println("姓名："+ stu.getName());
+                                            if(stu.getSex() == 1)
+                                            {
+                                                System.out.println("性别：男" );
+                                            }
+                                            else
+                                            {
+                                                System.out.println("性别：女");
+                                            }
+                                            System.out.println("学号："+ stu.getNumber());
                                             break;
                                         case 2:
                                             String name;

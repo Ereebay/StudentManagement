@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -15,20 +16,6 @@ public class Student {
         this.name = name;
         this.sex = sex;
         this.number = number;
-    }
-    public void getinfo()
-    {
-        System.out.println("您的学生信息如下：");
-        System.out.println("姓名："+ name);
-        if(sex == 1)
-        {
-            System.out.println("性别：男" );
-        }
-        else
-        {
-            System.out.println("性别：女");
-        }
-        System.out.println("学号："+ number);
     }
 
     public void setNumber(int number) {
