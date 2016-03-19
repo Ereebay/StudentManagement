@@ -42,4 +42,16 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public int getSex() {
+        return sex;
+    }
 }
