@@ -40,25 +40,29 @@ public class User {
         System.out.println("请输入你的用户名和密码");
         String user = in.next();
         String password = in.next();
-        for (int i = 0;i<list.size();i++)
-        {
-            if (Objects.equals(user, list.get(i).getUser()) & Objects.equals(password, list.get(i).getPassword()))
+        for (int i = 0;i<list.size();i++) {
+            if (Objects.equals(user, list.get(i).getUser()))
             {
-                System.out.println("登陆成功");
-                j =1;
+                if (Objects.equals(password, list.get(i).getPassword()))
+                {
+                    System.out.println("登陆成功");
+                    j = 1;
+                    break;
+                }
+                else
+                {
+                    System.out.println("密码错误");
+                    j = 3;
+                    break;
+                }
             }
-            else if (!Objects.equals(user, list.get(i).getUser())) {
-                System.out.println("登录失败");
-                System.out.println("账户不存在");
+            else {
                 j = 2;
-            } else if (Objects.equals(user,list.get(i).getUser()) & !Objects.equals(password,list.get(i).getPassword()))
-            {
-                System.out.println("登录失败");
-                System.out.println("密码不匹配");
-                j = 3;
-            } else {
-                j = 0;
             }
+        }
+        if(j == 2)
+        {
+            System.out.println("账号不存在");
         }
         return j;
     }
