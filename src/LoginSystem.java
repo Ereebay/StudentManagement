@@ -15,7 +15,6 @@ public class LoginSystem {
         System.out.println("*******************************");
         Scanner in = new Scanner(System.in);
         model1 = in.nextInt();
-        User user = new User();
         Student stu = new Student();
         if(model1 == 1)
         {
@@ -30,7 +29,7 @@ public class LoginSystem {
                 switch(model2)
                 {
                     case 1:
-                        switch (user.login())
+                        switch (stu.login())
                         {
                             case 1:
                                 while (true)
@@ -89,7 +88,7 @@ public class LoginSystem {
                                 i = in.nextInt();
                                 if(i == 1)
                                 {
-                                    user.register();
+                                    stu.register();
                                 }
                                 else
                                     System.out.println("返回上层");
@@ -100,7 +99,7 @@ public class LoginSystem {
                         }
                         break;
                     case 2:
-                        user.register();
+                        stu.register();
                         break;
                     case 3:
                         System.out.println("感谢使用");

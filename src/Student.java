@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by 鑫康 on 2016/3/14 0014.
  */
-public class Student {
+public class Student extends User{
     private String name = "初始值";
     private int sex = 1;
     private int number = 0;
