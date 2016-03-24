@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class User {
     private String user = "admin";
     private String password = "admin";
+    private Student stu = new Student();
     Scanner in = new Scanner(System.in);
     public User(){};
     public User(String usr,String pwd)
@@ -32,6 +33,11 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void getStudent()
+    {
+        System.out.println("姓名" + stu.getName());
     }
 
     public int login()
