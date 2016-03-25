@@ -32,6 +32,8 @@ public class LoginSystem {
                         switch (stu.login())
                         {
                             case 1:
+                                Student student = new Student();
+                                student = stu.getStudentinfo();
                                 while (true)
                                 {
                                     System.out.println("*****      菜单     *****");
@@ -48,9 +50,10 @@ public class LoginSystem {
                                     switch (key)
                                     {
                                         case 1:
+
                                             System.out.println("您的学生信息如下：");
-                                            System.out.println("姓名："+ stu.getName());
-                                            if(stu.getSex() == 1)
+                                            System.out.println("姓名："+ student.getName());
+                                            if(student.getSex() == 1)
                                             {
                                                 System.out.println("性别：男" );
                                             }
@@ -58,7 +61,7 @@ public class LoginSystem {
                                             {
                                                 System.out.println("性别：女");
                                             }
-                                            System.out.println("学号："+ stu.getNumber());
+                                            System.out.println("学号："+ student.getNumber());
                                             break;
                                         case 2:
                                             String name;
@@ -66,13 +69,13 @@ public class LoginSystem {
                                             int number;
                                             System.out.println("请输入姓名");
                                             name = in.next();
-                                            stu.setName(name);
+                                            student.setName(name);
                                             System.out.println("请输入性别,1男2女");
                                             sex = in.nextInt();
-                                            stu.setSex(sex);
+                                            student.setSex(sex);
                                             System.out.println("请输入学号");
                                             number = in.nextInt();
-                                            stu.setNumber(number);
+                                            student.setNumber(number);
                                             break;
                                         case 3:
                                             System.out.println("谢谢使用");
@@ -99,7 +102,7 @@ public class LoginSystem {
                         }
                         break;
                     case 2:
-                        stu.register();
+                        stu .register();
                         break;
                     case 3:
                         System.out.println("感谢使用");

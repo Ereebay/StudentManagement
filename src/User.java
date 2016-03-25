@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class User {
     private String user = "admin";
     private String password = "admin";
+    private int index;
     Scanner in = new Scanner(System.in);
     public User(){};
     public User(String usr,String pwd)
@@ -16,7 +17,7 @@ public class User {
         this.user = usr;
         this.password = pwd;
     }
-    ArrayList<User> list = new ArrayList<User>();
+    ArrayList<Student> list = new ArrayList<Student>();
     public String getUser()
     {
         return user;
@@ -34,6 +35,11 @@ public class User {
         this.password = password;
     }
 
+    public Student getStudentinfo()
+    {
+        return list.get(index);
+    }
+
     public int login()
     {
         int j = 0;
@@ -45,6 +51,7 @@ public class User {
             {
                 if (Objects.equals(password, list.get(i).getPassword()))
                 {
+                    index = i;
                     System.out.println("登陆成功");
                     j = 1;
                     break;
@@ -69,6 +76,7 @@ public class User {
 
     public int register()
     {
+        Student stu = new Student();
         System.out.println("欢迎来到注册页面");
         System.out.println("请输入你想要的的用户名");
         String usr;
@@ -76,7 +84,9 @@ public class User {
         System.out.println("请输入你想要的的密码");
         String pwd;
         pwd = in.next();
-        list.add(new User(usr,pwd));
+        stu.setUser(usr);
+        stu.setPassword(pwd);
+        list.add(stu);
         System.out.println("注册成功，请牢记你的用户名："+list.get(list.size()-1).getUser()+"密码："+list .get(list.size()-1).getPassword());
         return 1;
     }
