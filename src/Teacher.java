@@ -1,11 +1,13 @@
+import java.util.ArrayList;
+
 /**
  * Created by 鑫康 on 2016/3/14 0014.
  */
 public class Teacher extends User {
+    ArrayList<Teacher> list2 = new ArrayList<Teacher>();
     private String name = "初始值";
     private int sex = 1;
     private int num = 1;
-
     public void setName(String name) {
         this.name = name;
     }

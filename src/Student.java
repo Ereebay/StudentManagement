@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Created by 鑫康 on 2016/3/14 0014.
  */
 public class Student extends User{
+    ArrayList<Student> liststu = new ArrayList<Student>();
     private String name = "初始值";
     private int sex = 1;
     private int number = 0;
